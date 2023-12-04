@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dog and Cat Classifier</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .hero {
+      /* background: black url(static/images/Background.PNG) center / cover; */
+      background-image: url(static/images/Background.PNG);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+
+    .form-container {
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .form-container input {
+      align-self: center;
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- .hero -->
+  <section class="hero is-fullheight" has-background-black>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Dog & Cat Classifier
+        </h1>
+        <p class="subsubtitle">
+          by <strong>Marouane</strong> & <strong>Brahim</strong>
+        </p>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container has-text-centered bg-text" style="width: 100%">
+        <div class="container-text">
+          <p class="subtitle" style="color:black">
+            Vérifiez si votre ami à quatre pattes est vraiment <strong>un chat</strong> ou <strong>un chien!</strong>!
+          </p>
+          <i class="arrow_down"></i>
+          <form action="/classify" method="post" enctype="multipart/form-data"
+            style="margin-top: 30px; text-align: left;" class="form-container">
+            <div class="file has-name is-centered">
+              <label class="file-label">
+                <input class="file-input" type="file" id="image" name="image">
+                <span class="file-cta">
+                  <span class="file-label" style="text-align: left;">
+                    Choisir l'image
+                  </span>
+                </span>
+                <span class="file-name" id="file-name" style="margin-top: 30px; text-align: left; margin: auto;">
+                  Aucun fichier n'est choisi
+                </span>
+
+              </label>
+            </div>
+            <br>
+            <input type="submit" value="Classifier" class="button is-black" name="image" id="classify_button">
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <nav class="level">
+
+
+
+      <div class="level-item has-text-centered">
+        <div>
+          <h1 class="heading" style="color:rgb(15, 1, 1)"><strong>EHTP </strong></h1>
+        </div>
+      </div>
+    </nav>
+
+  </section>
+
+
+
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>
